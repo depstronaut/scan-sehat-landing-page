@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f8fafc;
+  color: #333;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #6A705F;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* logo kiri, menu kanan */
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 30px;  /* ubah 25–35px sesuai selera */
+  width: auto;
+  border-radius: 6px;  /* opsional */
+  vertical-align: middle;
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #41564E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.testimoni {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px; 
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+
+.testimoni blockquote {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px 20px;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.testimoni blockquote::before {
+    content: "“";
+    font-size: 3rem;
+    color: #a5d6a7;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-family: Georgia, serif;
+}
+
+.testimoni blockquote:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimoni img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 2px solid #4caf50;
+}
+
+.testimoni p {
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.testimoni cite {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #2e7d32;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 2px solid #333;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer .kontak {
+    margin-bottom: 20px;
+}
+
+footer .kontak h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+footer .kontak a {
+    display: inline-block;
+    color: #f1f1f1;
+    margin: 0 12px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .kontak a:hover {
+    color: #4caf50;
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-top: 15px;
+}
+
+/* Bagian CTA (Call To Action) — "Mulai Gunakan ScanSehat Sekarang!" */
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    padding: 80px 20px;
+    border-radius: 24px;
+    margin: 60px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cta-section p {
+    font-size: 1.6rem;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.cta-section button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-section button:hover {
+    background-color: #388e3c;
+    box-shadow: 0 6px 15px rgba(56, 142, 60, 0.4);
+    transform: translateY(-3px);
+}
+
+.cta-section button:active {
+    transform: scale(0.97);
+}
