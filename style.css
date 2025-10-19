@@ -80,6 +80,125 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+
+/* ===== HERO SECTION ===== */
+#Hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #E8F5E9, #ffffff);
+  color: #2e7d32;
+  min-height: 80vh;
+}
+
+#Hero img {
+  width: 350px;
+  max-width: 90%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#Hero img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+#Hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #41564E;
+}
+
+#Hero p {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ===== SECTION UMUM ===== */
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+section p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ===== FITUR / FEATURES ===== */
+#features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.features {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.features:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.features h3 {
+  color: #388e3c;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.features p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  #Hero {
+    padding: 80px 20px;
+  }
+
+  #Hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #Hero p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    display: none; /* nanti bisa diganti dengan hamburger menu */
+  }
+}
+
+/* ===== TESTIMONI SECTION ===== */
 .testimoni {
     display: flex;
     justify-content: center;
@@ -144,49 +263,50 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
+/* ===== FOOTER (Full Width) ===== */
 footer {
-    background-color: #1c1c1c;
-    color: #f1f1f1;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 2px solid #333;
-    width: 100%;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 80px;
+  border-top: 3px solid #4caf50;
 }
 
-footer .kontak {
-    margin-bottom: 20px;
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-footer .kontak h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
-footer .kontak a {
-    display: inline-block;
-    color: #f1f1f1;
-    margin: 0 12px;
-    font-size: 1.3rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer .kontak a:hover {
-    color: #4caf50;
-    transform: scale(1.1);
+footer h2 {
+  color: #81c784;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 footer p {
-    font-size: 0.9rem;
-    color: #aaaaaa;
-    margin-top: 15px;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin: 8px 0;
+}
+
+footer a {
+  color: #81c784;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #a5d6a7;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #9e9e9e;
 }
 
 /* Bagian CTA (Call To Action) — "Mulai Gunakan ScanSehat Sekarang!" */
