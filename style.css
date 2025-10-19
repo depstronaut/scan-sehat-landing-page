@@ -1,360 +1,507 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f8fafc;
-  color: #333;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #6A705F;
-  color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-} 
-
-nav {
-  display: flex;
-  justify-content: space-between; /* logo kiri, menu kanan */
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo img {
-  height: 30px;  /* ubah 25–35px sesuai selera */
-  width: auto;
-  border-radius: 6px;  /* opsional */
-  vertical-align: middle;
-}
-
-.logo h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-}
-
-nav h2 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #41564E;
-}
-
-* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8fafc;
+    color: #333;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #6A705F;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.logo h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #a5d6a7;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #a5d6a7;
+}
 
 /* ===== HERO SECTION ===== */
 #Hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #E8F5E9, #ffffff);
-  color: #2e7d32;
-  min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #E8F5E9, #ffffff);
+    min-height: 85vh;
 }
 
 #Hero img {
-  width: 350px;
-  max-width: 90%;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 #Hero img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 #Hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  color: #41564E;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #41564E;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease;
 }
 
 #Hero p {
-  font-size: 1.2rem;
-  color: #4b4b4b;
-  max-width: 700px;
-  line-height: 1.7;
+    font-size: 1.3rem;
+    color: #4b4b4b;
+    max-width: 750px;
+    line-height: 1.8;
+    animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== SECTION UMUM ===== */
-section {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin: 0 auto;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
 }
 
 section h2 {
-  text-align: center;
-  color: #2e7d32;
-  margin-bottom: 25px;
-  font-size: 2rem;
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 section p {
-  text-align: justify;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===== TENTANG KAMI ===== */
+#TentangKami {
+    background-color: #ffffff;
+}
+
+#TentangKami .container {
+    max-width: 900px;
+}
+
+#TentangKami p {
+    text-align: justify;
 }
 
 /* ===== FITUR / FEATURES ===== */
 #features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+    background: linear-gradient(135deg, #f1f8f4, #ffffff);
 }
 
-.features {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: all 0.3s ease;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.features:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.feature-card {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.features h3 {
-  color: #388e3c;
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #4caf50;
 }
 
-.features p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  #Hero {
-    padding: 80px 20px;
-  }
+.feature-card h3 {
+    color: #388e3c;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
 
-  #Hero h1 {
-    font-size: 2.2rem;
-  }
-
-  #Hero p {
+.feature-card p {
     font-size: 1rem;
-  }
-
-  nav ul {
-    display: none; /* nanti bisa diganti dengan hamburger menu */
-  }
+    color: #666;
+    line-height: 1.7;
+    text-align: center;
 }
 
-/* ===== TESTIMONI SECTION ===== */
+/* ===== UNTUK SIAPA ===== */
+.untuk-siapa {
+    background-color: #ffffff;
+}
+
+.untuk-siapa p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* ===== CARA KERJA ===== */
+.cara-kerja {
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #4caf50, #81c784);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.step-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.step-card h3 {
+    color: #2e7d32;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.step-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* ===== TESTIMONI ===== */
+.testimoni-section {
+    background-color: #ffffff;
+}
+
 .testimoni {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 24px; 
+    gap: 30px;
     flex-wrap: wrap;
-    background: linear-gradient(135deg, #e8f5e9, #ffffff);
-    padding: 50px 20px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    transition: all 0.3s ease;
+    margin-top: 50px;
 }
 
 .testimoni blockquote {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 25px 20px;
-    max-width: 320px;
+    background: linear-gradient(135deg, #ffffff, #f1f8f4);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 35px 25px;
+    max-width: 350px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    border: 2px solid #e8f5e9;
 }
 
 .testimoni blockquote::before {
     content: "“";
-    font-size: 3rem;
+    font-size: 4rem;
     color: #a5d6a7;
     position: absolute;
-    top: -10px;
-    left: 15px;
+    top: -15px;
+    left: 20px;
     font-family: Georgia, serif;
+    opacity: 0.3;
 }
 
 .testimoni blockquote:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #4caf50;
 }
 
 .testimoni img {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    margin-bottom: 12px;
-    border: 2px solid #4caf50;
+    margin-bottom: 20px;
+    border: 3px solid #4caf50;
 }
 
 .testimoni p {
     font-style: italic;
-    color: #444;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .testimoni cite {
     display: block;
-    margin-top: 12px;
+    margin-top: 15px;
     font-weight: 600;
     color: #2e7d32;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-style: normal;
 }
 
-/* ===== FOOTER (Full Width) ===== */
-footer {
-  width: 100%;
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-  text-align: center;
-  padding: 60px 20px;
-  margin-top: 80px;
-  border-top: 3px solid #4caf50;
+.rating {
+    color: #ffa726;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-.footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-footer h2 {
-  color: #81c784;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-footer p {
-  font-size: 1rem;
-  color: #e0e0e0;
-  margin: 8px 0;
-}
-
-footer a {
-  color: #81c784;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #a5d6a7;
-  text-decoration: underline;
-}
-
-.footer-copy {
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #9e9e9e;
-}
-
-/* Bagian CTA (Call To Action) — "Mulai Gunakan ScanSehat Sekarang!" */
+/* ===== CTA SECTION ===== */
 .cta-section {
     text-align: center;
-    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
     padding: 80px 20px;
     border-radius: 24px;
-    margin: 60px auto;
+    margin: 80px auto;
     width: 90%;
-    max-width: 800px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
 }
 
 .cta-section p {
-    font-size: 1.6rem;
-    color: #2e7d32;
-    font-weight: 600;
-    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 30px;
     letter-spacing: 0.5px;
 }
 
 .cta-section button {
-    background-color: #4caf50;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #4caf50;
     border: none;
-    padding: 14px 36px;
-    font-size: 1rem;
-    border-radius: 30px;
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .cta-section button:hover {
-    background-color: #388e3c;
-    box-shadow: 0 6px 15px rgba(56, 142, 60, 0.4);
-    transform: translateY(-3px);
+    background-color: #f1f8f4;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section button:active {
-    transform: scale(0.97);
+    transform: scale(0.98);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 60px 20px 30px;
+    border-top: 4px solid #4caf50;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    color: #81c784;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+footer p {
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    margin: 12px 0;
+}
+
+footer a {
+    color: #81c784;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #a5d6a7;
+    text-decoration: underline;
+}
+
+.footer-copy {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.95rem;
+    color: #9e9e9e;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    #Hero {
+        padding: 60px 20px;
+        min-height: 70vh;
+    }
+
+    #Hero h1 {
+        font-size: 2.2rem;
+    }
+
+    #Hero p {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 60px 20px;
+    }
+
+    .cta-section p {
+        font-size: 1.5rem;
+    }
+
+    .features-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
 }
